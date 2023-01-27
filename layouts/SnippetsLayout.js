@@ -52,9 +52,9 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
                {displayPosts.map((frontMatter) => {
                   const { slug, date, title, summary, tags } = frontMatter
                   return (
-                     <Link
+                     <div
                         key={slug}
-                        href={`/snippets/${slug}`}
+                        // href={`/snippets/${slug}`}
                         className="bg-day·dark:bg-night·group group relative flex transform cursor-pointer flex-wrap border border-gray-200 bg-opacity-50 p-px py-px transition duration-200 hover:scale-105 dark:border-gray-700 dark:bg-opacity-50"
                      >
                         <div className="absolute bottom-0 left-0 h-0.5 w-full origin-left scale-x-0 transform bg-blue-500 duration-200 group-hover:scale-x-100" />
@@ -64,10 +64,11 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
                         <div className="bg-day dark:bg-night relative space-y-2 rounded-2xl p-4">
                            <article>
                               <div>
-                                 <h2 className="text-2xl font-bold leading-8 tracking-tight ">
+                                 <h2 className="group-hover:text-blue-500 text-2xl font-bold leading-8 tracking-tight ">
                                     <Link
+                                       key={slug}
                                        href={`/snippets/${slug}`}
-                                       className="text-gray-900 transition  duration-500 ease-in-out hover:text-blue-500 dark:text-gray-100 dark:hover:text-blue-500"
+                                       className="text-gray-900 transition cursor-pointer duration-500 ease-in-out hover:text-blue-500 dark:text-gray-100 dark:hover:text-blue-500"
                                     >
                                        {title}
                                     </Link>
@@ -76,15 +77,15 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
                                     {summary}
                                  </div>
 
+                              </div>
                                  <div className="flex flex-wrap pt-2">
                                     {tags.map((tag) => (
                                        <Tag key={tag} text={tag} />
                                     ))}
                                  </div>
-                              </div>
                            </article>
                         </div>
-                     </Link>
+                     </div>
                   )
                })}
             </div>
