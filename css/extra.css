@@ -289,7 +289,7 @@ input:-webkit-autofill:focus {
 	-webkit-text-fill-color: #3b82f6; */
 
    text-shadow: 1px 1px 0px rgb(255, 255, 255);
-   font-size: 3rem;
+   font-size: 2rem;
    display: flex;
    align-items: center;
    justify-content: center;

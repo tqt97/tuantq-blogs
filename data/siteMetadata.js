@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'Tuantq Blog',
   author: 'tuantq',
   headerTitle: 'Tuantq Blogs',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description: 'A blog created with Next.js and Tailwind.css by Tuantq. The template is designed based on tailwind-nextjs-starter-blog-Public template',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tuantq-blogs.vercel.app',
@@ -22,7 +22,7 @@ const siteMetadata = {
     // content security policy in the `next.config.js` file.
     // supports plausible, simpleAnalytics, umami or googleAnalytics
     plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
-    simpleAnalytics: false, // true or false
+    simpleAnalytics: true, // true or false
     umamiWebsiteId: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
     googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
     posthogAnalyticsId: '', // posthog.init e.g. phc_5yXvArzvRdqtZIsHkEm3Fkkhm3d0bEYUXCaFISzqPSQ
@@ -41,11 +41,11 @@ const siteMetadata = {
     giscusConfig: {
       // Visit the link below, and follow the steps in the 'configuration' section
       // https://giscus.app/
-      repo: process.env.NEXT_PUBLIC_GISCUS_REPO,
-      repositoryId: process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID,
-      category: process.env.NEXT_PUBLIC_GISCUS_CATEGORY,
-      categoryId: process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID,
-      mapping: 'pathname', // supported options: pathname, url, title
+      repo: 'tqt97/tuantq-blogs' ,
+      repositoryId:'R_kgDOI2Xxsw',
+      category: 'Q&A',
+      categoryId: 'DIC_kwDOI2Xxs84CT1Rv',
+      mapping: 'title', // supported options: pathname, url, title
       reactions: '1', // Emoji reactions: 1 = enable / 0 = disable
       // Send discussion metadata periodically to the parent window: 1 = enable / 0 = disable
       metadata: '0',

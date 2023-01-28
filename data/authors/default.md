@@ -1,29 +1,31 @@
 ---
-name: Tuantq
+name: Từ Quốc Tuấn
 avatar: /static/images/avatar.png
-occupation: PHP Backend Developer
+occupation: Kỹ sư phát triển phần mềm
+major: PHP Backend
 company: Viettel IDC
-email: tuantq@viettelidc.com.vn
+email: quoctuanit2018@gmail.com
 twitter: https://twitter.com/tqtit97
 linkedin: https://www.linkedin.com/in/tqtit97/
 github: https://github.com/tqt97
 ---
 
-Hi there, my name is **Tuan**. I'm 26 years old and i come from **Vietnam**.
+Xin chào các bạn, mình là **Tuấn**. Mình 26 tuổi và đến từ một tỉnh ở mảnh đất tây nguyên mang tên Gia Lai.
 
-Now, I'm a **backend PHP developer** at **Viettel IDC**.
+Hiện tại mình đang sống ở TP Hồ Chí Minh và làm việc tại Viettel IDC với vị trí kỹ sư phát triển phần mềm PHP.
 
-My skills:
+Mình có niềm đam mê với công nghệ, tốc độ và âm nhạc.
+
+Những kỹ năng của mình như :
+
    - HTML,CSS,JS
    - PHP ( Laravel Framework)
    - Vuejs
    - Mysql
 
-I like technology, music and movie.
-
-Contact me at:
-   - **Phone**: +84375 468 299
+Liên hệ với mình:
+   - **Điện thoại**: +84375 468 299
    - **Email 1**: quoctuanit2018@gmail.com
    - **Email 2**: kutuanonline199@gmail.com
    - **Email 3**: tuantq@viettelidc.com.vn
-   - **Address**: Le Duc Tho Street, Go Vap district, Ho Chi Minh City
+   - **Địa chỉ**: 1144 Lê Đức Thọ, Gò Vấp, TP Hồ Chí Minh

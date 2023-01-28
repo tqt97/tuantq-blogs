@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useCallback } from 'react'
-import { useTheme } from 'next-themes'
+import React, { useCallback, useEffect, useState } from 'react'
 
 import siteMetadata from '@/data/siteMetadata'
+import { useTheme } from 'next-themes'
 
 const Giscus = () => {
   const [enableLoadComments, setEnabledLoadComments] = useState(true)
@@ -56,8 +56,8 @@ const Giscus = () => {
 
   // Reload on theme change
   useEffect(() => {
-    const iframe = document.querySelector('iframe.giscus-frame')
-    if (!iframe) return
+    // const iframe = document.querySelector('iframe.giscus-frame')
+    // if (!iframe) return
     LoadComments()
   }, [LoadComments])
 

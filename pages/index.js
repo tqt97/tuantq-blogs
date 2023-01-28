@@ -19,15 +19,7 @@ export default function Home({ posts }) {
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="flex flex-col items-center xl:flex-row gap-x-12 mb-12">
-        <div className="pt-6">
-          <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-3xl md:leading-14">
-            Hi, I’m <span className='text-blue-500 text-font-family'>Tuantq</span>
-          </h1>
-          <h2 className="text-lg prose text-gray-600 dark:text-gray-400">
-            {`Welcome to my ${siteMetadata.description}. Feel at home, ask, comment, give your opinion...`}
-          </h2>
-        </div>
-        {/* <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center">
           <div className="flex flex-col items-center pt-8 my-2 space-x-2">
             <Image
               src={siteMetadata.image}
@@ -37,34 +29,45 @@ export default function Home({ posts }) {
               className="w-48 h-48 rounded-full"
             />
           </div>
-        </div> */}
+        </div>
+        <div className="pt-6 ml-4">
+          <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight sm:text-4xl sm:leading-10 md:text-3xl md:leading-14">
+            Hi, I’m <span className='text-blue-500 text-font-family'>Tuantq</span>
+          </h1>
+          <h2 className="text-lg prose text-gray-600 dark:text-gray-400">
+            {`Welcome to my ${siteMetadata.description}. Feel at home, ask, comment, give your opinion...`}
+          </h2>
+        </div>
+
 
       </div>
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+      <div className="divide-y1 divide-gray-2001 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-md font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-4xl md:leading-14">
             Latest posts
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+          {/* <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
-          </p>
+          </p> */}
         </div>
-        <ul className="divide-y1 divide-gray-200 dark:divide-gray-700">
+        <ul className="divide-y1 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
-              <li key={slug} className="py-12 group-link-underline p-8 bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-105 dark:hover:shadow-xl hover:shadow-md dark:hover-shadow-xl dark:shadow-white hover:rounded-xl hover:bg-blue-50 hover:bg-opacity-50 dark:hover:bg-gray-800">
+              <li key={slug} className="py-0 group-link-underline p-8 bg-transparent bg-opacity-100 px-2 transition duration-100 dark:hover:shadow-xl dark:hover-shadow-xl dark:shadow-white hover:rounded-xl hover:bg-slate-50 dark:hover:bg-gray-800">
                 <article>
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                  <div className="space-y-20 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
                     <dl>
                       <dt className="sr-only">Published on</dt>
                       <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                         <time dateTime={date}>{formatDate(date)}</time>
                       </dd>
                     </dl>
-                    <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-6">
+                    {/* Custom timeline */}
+                    <div className="space-y-50 xl:col-span-3 relative sm:border-l sm:border-gray-200 dark:border-gray-700">
+                      <div className="space-y-3 ml-4">
+                        <div class="hidden sm:block absolute w-3 h-3 bg-gray-300 rounded-full mt-2 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-300"></div>
                         <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight mb-4">
                             <Link
@@ -84,7 +87,7 @@ export default function Home({ posts }) {
                           {summary}
                         </div>
                       </div>
-                      <div className="text-base font-medium leading-6">
+                      <div className="text-base font-medium leading-6 ml-4 my-3">
                         <Link
                           href={`/blog/${slug}`}
                           className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition duration-150"
@@ -94,6 +97,7 @@ export default function Home({ posts }) {
                         </Link>
                       </div>
                     </div>
+                    {/* End Custom */}
                   </div>
                 </article>
               </li>
