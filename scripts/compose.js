@@ -55,6 +55,11 @@ const genFrontMatter = (answers) => {
 inquirer
   .prompt([
     {
+      name: 'nestPath',
+      message: 'Do you want to add post to nest route:',
+      type: 'input',
+    },
+    {
       name: 'title',
       message: 'Enter post title:',
       type: 'input',
@@ -106,9 +111,17 @@ inquirer
       .replace(/[^a-zA-Z0-9 ]/g, '')
       .replace(/ /g, '-')
       .replace(/-+/g, '-')
+    const nestPath = answers.nestPath
+      .toLowerCase()
+      .replace(/[^a-zA-Z0-9 ]/g, '')
+      .replace(/ /g, '-')
+      .replace(/-+/g, '-')
     const frontMatter = genFrontMatter(answers)
     if (!fs.existsSync('data/blog')) fs.mkdirSync('data/blog', { recursive: true })
-    const filePath = `data/blog/${fileName ? fileName : 'untitled'}.${
+    if(nestPath){
+      if (!fs.existsSync(`data/blog/${nestPath}`)) fs.mkdirSync((`data/blog/${nestPath}`), { recursive: true })
+    }
+    const filePath = `data/blog/${nestPath ? nestPath+'/' :''}${fileName ? fileName : 'untitled'}.${
       answers.extension ? answers.extension : 'md'
     }`
     fs.writeFile(filePath, frontMatter, { flag: 'wx' }, (err) => {
